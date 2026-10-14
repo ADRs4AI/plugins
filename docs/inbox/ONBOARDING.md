@@ -1,6 +1,6 @@
 # Crew Onboarding — read this first if you've been recruited
 
-Welcome to **⟦PROJECT-NAME⟧** — ⟦PROJECT-ONE-LINER⟧ <!-- one line: what this
+Welcome to **ADRs4AI Plugins** — the marketplace + flagship plugin that carry the ADRs4AI methodology's operator layer to strangers (`/plugin marketplace add ADRs4AI/plugins` → `/plugin install adr@adrs4ai`); human collaborator: Jérémie Lumbroso <!-- one line: what this
 project is and who the human collaborator(s) are -->.
 
 This document captures **80% of what every seat needs to know** so per-recruit
@@ -60,7 +60,7 @@ the tmux hive.
 
 ## 1. What this project is
 
-⟦PROJECT-GOAL⟧ <!-- 1-3 sentences: the goal, the repo's role (product repo?
+The distribution tier of the ADRs4AI methodology: one repo that is both the plugin marketplace (`adrs4ai`) and the flagship plugin (`adr`) — skills, operator commands, the `@adrs4ai/mcp` config when it publishes, and an eval suite as the quality signature. Built from the canonical template as a kintsugi-adopted instance (the lock is the bill of materials); the record layer stays in-repo everywhere, this repo ships the operator layer that follows the person. Design: HQ ADR-0041 (Accepted); names: Mint №77/№78. <!-- 1-3 sentences: the goal, the repo's role (product repo?
 coordination layer?), where implementation happens; same token as CLAUDE.md's -->
 
 **Read first**, in order:

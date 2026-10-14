@@ -517,14 +517,17 @@ unanswered:
 # The day-one verification gate (porthole item 16): real checks that exist at
 # birth, plus a marked slot for the project's own gate once it has one.
 [group('status')]
-[doc("Day-one gate: instantiate-check + registry validation (+ your project gate — edit me)")]
+[doc("Gate: instantiate-check + registry validation + plugin/marketplace manifest validation")]
 gate:
     #!/usr/bin/env bash
     set -euo pipefail
     just instantiate-check
     python3 scripts/groups-lookup.py --validate
-    # ADD YOUR PROJECT'S OWN GATE HERE when it exists (test suite, build, linter)
-    echo "✅ gate green (day-one checks; project gate slot above)"
+    # This repo's own gate: the marketplace and every plugin must validate —
+    # a malformed manifest ships a broken `/plugin marketplace add` to strangers.
+    claude plugin validate .
+    claude plugin validate plugins/adr
+    echo "✅ gate green (instantiation + registry + plugin manifests; run 'claude plugin eval plugins/adr' before any release tag)"
 
 # Is this instance fully instantiated? Greps for remaining ⟦SIGIL⟧ placeholders
 # (the closed registry: docs/adr/templates/placeholders.yaml) and warns on

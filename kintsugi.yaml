@@ -1,6 +1,15 @@
 # kintsugi.yaml — the canonical template's SHIPPED manifest (template vNEXT).
 # Copied verbatim at instantiation; `kintsugi adopt` then writes the lock.
 #
+# THIS REPO'S DECLARED INTERIM (ADR-0041, Kintsugi's one-source rulings):
+# `plugins/adr/skills/*` are CARGO — byte-identical copies of the canonical
+# template's skills, re-published by the plugin. The lock is each release's
+# bill of materials. These rows swap to profile delivery
+# (`kintsugi adopt --profile plugin-operator`, canonical-zone include list)
+# when kintsugi v0.13 ships profiles; until then the cargo refreshes by
+# re-copy at release time, and adaptations NEVER land here — they travel
+# upstream (brief → canonical release) and return by `kintsugi update`.
+#
 # Enumeration doctrine (release checklist #1 — never from memory): every path
 # below was classified from `git ls-tree -r --name-only v3.9.2` (35 paths);
 # re-run that command against the new tag BEFORE every release, give every

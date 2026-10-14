@@ -1,0 +1,24 @@
+{
+  "name": "adrs4ai",
+  "owner": {
+    "name": "ADRs4AI",
+    "url": "https://github.com/ADRs4AI"
+  },
+  "metadata": {
+    "description": "The plugins of ADRs4AI — durable human-AI collaboration via Architectural Deliberation Records. Flagship: adr (the methodology's teaching core + operator commands + eval suite).",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "adr",
+      "source": "./plugins/adr",
+      "description": "The ADRs4AI methodology's operator layer: adr-authoring, adrs4ai-tooling, and question-tours skills; /adr:new, /adr:unanswered, /adr:qst-lint commands; eval suite (with/without ablation). The @adrs4ai/mcp server config joins when it publishes (HQ ADR-0039).",
+      "author": {
+        "name": "Jérémie Lumbroso and the ADRs4AI crews",
+        "url": "https://github.com/ADRs4AI"
+      },
+      "license": "MIT",
+      "keywords": ["adr", "methodology", "deliberation", "human-ai-collaboration", "documentation"]
+    }
+  ]
+}
