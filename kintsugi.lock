@@ -1,0 +1,121 @@
+# kintsugi.lock — tool-written state; do not hand-edit.
+# What this repo HAS, per artifact (base version + exact canonical blob).
+kintsugi_schema: 1
+canonical_version: 3.11.6
+synced: '2026-10-14T03:24:19Z'
+artifacts:
+  .claude/agent.env:
+    base_version: 3.11.6
+    base_blob: c20a2608bb5fb10c4a26975071fcd4df92fbf299
+    state_at_adopt: unmodified+current
+  .claude/skills/adr-authoring/SKILL.md:
+    base_version: 0+git.20d855a
+    base_blob: 5408d18b7e3fcea7546b785bb4c88156ffaf33cd
+    state_at_adopt: unmodified+behind
+  .claude/skills/adr-authoring/references/depth.md:
+    base_version: 3.11.6
+    base_blob: 479e7aeaa4fac1c6fed7d2d57077e8c1ef58bca4
+    state_at_adopt: unmodified+current
+  .claude/skills/adr-authoring/references/freshening.md:
+    base_version: 3.11.6
+    base_blob: 98299f3a5245903dbf251a757ca746e1e96152a0
+    state_at_adopt: unmodified+current
+  .claude/skills/adr-authoring/references/questions-reference.md:
+    base_version: 3.11.6
+    base_blob: edb0148e4db42c6b6df925cdf9f2b8fc5ab2b968
+    state_at_adopt: unmodified+current
+  .claude/skills/adrs4ai-tooling/SKILL.md:
+    state_at_adopt: not-in-canonical
+  .claude/skills/adrs4ai-tooling/references/seats-models-and-usage-caps.md:
+    state_at_adopt: not-in-canonical
+  .claude/skills/question-tours/SKILL.md:
+    state_at_adopt: not-in-canonical
+  .gitignore:
+    base_version: 3.11.6
+    base_blob: 310cd93f7b97d07a03445925a397ce408dca732d
+    state_at_adopt: unmodified+current
+  .vscode/vscode-optimization-guide.md:
+    base_version: 3.11.6
+    base_blob: c530ec32ed082c3649c967556ba7ac541e3f39bb
+    state_at_adopt: unmodified+current
+  CHANGELOG.md:
+    state_at_adopt: unknown-base
+  CLAUDE.md:
+    state_at_adopt: unknown-base
+  QUICK-START.md:
+    state_at_adopt: missing-local
+  README.md:
+    state_at_adopt: unknown-base
+  docs/METHODOLOGY.md:
+    base_version: 3.11.6
+    base_blob: a3480a0e364fe47f30af328df7fb5f9d899b28d1
+    state_at_adopt: unmodified+current
+  docs/adr/AGENTS.md:
+    base_version: 3.11.6
+    base_blob: df8c39920e78f66d9ca29a663b6ef56600bdb2b0
+    state_at_adopt: unmodified+current
+  docs/adr/templates/AGENTS.md:
+    base_version: 3.11.6
+    base_blob: 3ad56716a2a0fbd13b706b9031e61db35c4f219f
+    state_at_adopt: unmodified+current
+  docs/adr/templates/adr-madr.md:
+    base_version: 0+git.6bbe052
+    base_blob: 09622e4274c73f946b8f96f29e93c8b9c172440c
+    state_at_adopt: unmodified+behind
+  docs/adr/templates/adr.md:
+    base_version: 0+git.6bbe052
+    base_blob: 3fc9dd60070ea4e46abb88701239ecf76643cf10
+    state_at_adopt: unmodified+behind
+  docs/adr/templates/debrief.md:
+    base_version: 3.11.6
+    base_blob: d739a95efaea09d6be0fe9b82653778bd36cb1bf
+    state_at_adopt: unmodified+current
+  docs/adr/templates/failure-classes.md:
+    base_version: 3.11.6
+    base_blob: 75bfa61e4ce325dd4b9defa7dba5896c7c94c52b
+    state_at_adopt: unmodified+current
+  docs/adr/templates/seed.md:
+    base_version: 3.11.6
+    base_blob: 9ccde253bfc98035b50f96eb270fe9e3be2603f7
+    state_at_adopt: unmodified+current
+  docs/inbox/CONVENTIONS.md:
+    base_version: 0+git.6bbe052
+    base_blob: 06f3df6ef76f28855005d908039809b1afb68feb
+    state_at_adopt: unmodified+behind
+  docs/inbox/ENCODING-MAP.md:
+    base_version: 3.11.6
+    base_blob: 34b80f2a572b700f6eb7194ed58ab55b6694fbb9
+    state_at_adopt: unmodified+current
+  docs/inbox/INBOX-PROTOCOL.md:
+    base_version: 0+git.6bbe052
+    base_blob: f81dd3524ea95d6caa40b6e8bdb2dba162d60e85
+    state_at_adopt: unmodified+behind
+  docs/inbox/ONBOARDING.md:
+    state_at_adopt: unknown-base
+  justfile:
+    state_at_adopt: unknown-base
+  scripts/groups-lookup.py:
+    base_version: 3.11.6
+    base_blob: 0e2ac2ba306b006302a76e85429b427640246060
+    state_at_adopt: unmodified+current
+  scripts/hooks/remind-uncommitted-substrate.py:
+    base_version: 3.11.6
+    base_blob: 48d49ea2929d6e49fa12ba877a4413096cde8cf7
+    state_at_adopt: unmodified+current
+  scripts/tmux/seat.conf:
+    base_version: 3.11.6
+    base_blob: 3a36bec4fab3b8555c0c772d8d80d862010d3875
+    state_at_adopt: unmodified+current
+  scripts/unwrap-adrs/README.md:
+    base_version: 3.11.6
+    base_blob: 64bdd5a8eca10f2b8b2fb2c512ad4befb00a1266
+    state_at_adopt: unmodified+current
+  scripts/unwrap-adrs/unwrap-adrs.mjs:
+    base_version: 3.11.6
+    base_blob: 2404a13f76c91815f6e6aa0eaca08f7a90cbf75c
+    state_at_adopt: unmodified+current
+  scripts/unwrap-adrs/unwrap-adrs.py:
+    base_version: 3.11.6
+    base_blob: a284dc6e551e0338dcf51b34154f450bbea509bf
+    state_at_adopt: unmodified+current
+applied_bundles: []
