@@ -1,0 +1,47 @@
+# The instantiation-placeholder registry — the closed set of ⟦SIGIL⟧ tokens.
+# (QST-INSTANTIATION-SIGIL ruled A, 2026-10-11; pair ⟦…⟧ confirmed 3-for-3 by
+# Riddle/parser, Naturalist/corpus, Mint/word №85: "grep-proof means
+# every-occurrence-authored, and keyboard-distance is how you buy it.")
+#
+# THREE PLACEHOLDER SPECIES — only the first uses sigils:
+#   1. Instantiation placeholders (this registry): die at template-birth;
+#      fill-and-delete; `just instantiate-check` passes only when none remain.
+#   2. Dialogue placeholders: `[Fill this in]` — frozen CORE, parser-significant,
+#      stays bracketed FOREVER (⟦Fill this in⟧ would parse as a real answer).
+#   3. Per-document mold slots: the [bracketed] fields inside docs/adr/templates/
+#      molds — filled at every mint, not at birth; never sigiled (a half-drafted
+#      ADR is healthy, not incomplete instantiation).
+#
+# Closed and enumerable on purpose (Naturalist's design): the check reports
+# WHICH slots remain, and unknown-token drift is impossible — a new slot means
+# a new row here first. Token words rideable by Mint's ledger if contested.
+# This file propagates by kintsugi like every managed artifact.
+
+tokens:
+  PROJECT-NAME:
+    files: [CLAUDE.md, docs/inbox/ONBOARDING.md]
+    note: the project's name, as the crew says it
+  PROJECT-ONE-LINER:
+    files: [docs/inbox/ONBOARDING.md]
+    note: one line — what this project is and who the humans are
+  PROJECT-GOAL:
+    files: [CLAUDE.md, docs/inbox/ONBOARDING.md]
+    note: 1-3 sentences — the goal, the repo's role, where implementation happens
+  HUMANS:
+    files: [CLAUDE.md]
+    note: the human collaborator(s)
+  AI-SEATS:
+    files: [CLAUDE.md]
+    note: AI participant(s); with the crew layer, name the coordinator and point at the registry
+  LAST-UPDATED:
+    files: [CLAUDE.md]
+    note: YYYY-MM-DD (or "Month DD, YYYY" house style)
+  CURRENT-FOCUS:
+    files: [CLAUDE.md]
+    note: what's being worked on right now
+  VERIFICATION-GATE:
+    files: [CLAUDE.md]
+    note: the Fifth Directive's real gate command (two sites — prose and the process block)
+  GATE-WHY:
+    files: [CLAUDE.md]
+    note: what the gate actually catches; an unfollowable directive teaches that directives are decorative

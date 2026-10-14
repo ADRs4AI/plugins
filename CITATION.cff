@@ -1,0 +1,42 @@
+# CITATION.cff — makes GitHub's "Cite this repository" button work and feeds
+# Zenodo metadata on future mints. The concept DOI below cites the living work
+# (always resolves to the latest archived version); cite a version DOI only to
+# pin a release (v3.11.6: 10.5281/zenodo.23303470).
+#
+# NOTE (2026-10-11): the authors list currently carries the human author only.
+# The README credits Claude models as co-creators; whether the FORMAL citation
+# record lists them is the founder's standing decision (flagged at the first
+# mint, Custos brief 1757) — amend here and in the Zenodo record when ruled.
+cff-version: 1.2.0
+message: >-
+  If you use this template or build on its methodology, please cite it
+  using the metadata below. The concept DOI (10.5281/zenodo.23303469)
+  always resolves to the latest archived release; cite a version DOI to
+  pin the exact release you used.
+title: "ADRs for AI: Human-AI Collaboration Template A"
+abstract: >-
+  The canonical template of ADRs for AI (ADRs4AI) — git-native tooling for deliberative
+  programming: human-AI collaboration in which decisions are first-class,
+  durable artifacts. Humans and AI agents co-author Architectural
+  Deliberation Records (ADRs) and seeds in a question-and-answer grammar
+  that tooling can parse; every open question carries a reasoned,
+  attributed recommendation, so deciding starts from carried reasoning
+  rather than a blank page; inbox and crew protocols extend one
+  deliberation record across multi-agent, multi-vendor teams. The
+  template's own development record is the first specimen: the method
+  ships demonstrated in the substrate it was built with.
+keywords:
+  - "human-AI collaboration"
+  - "deliberative programming"
+  - "architectural deliberation records"
+  - "architecture decision records"
+  - "AI agents"
+  - "multi-agent coordination"
+  - "software engineering methodology"
+  - "knowledge management"
+authors:
+  - family-names: "Lumbroso"
+    given-names: "Jérémie"
+doi: 10.5281/zenodo.23303469
+repository-code: "https://github.com/ADRs4AI/human-ai-collaboration-template-A"
+license: MIT
