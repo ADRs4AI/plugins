@@ -6,4 +6,4 @@
 
 # Python temporary files
 __pycache__/
-*.py[cod]
+*.py[cod]plugins/adr/evals/results/

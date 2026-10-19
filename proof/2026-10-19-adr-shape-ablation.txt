@@ -1,0 +1,11 @@
+adr@adrs4ai — the founding eval signature (with/without ablation)
+
+claude plugin eval plugins/adr --allow-tools Write   (2026-10-19T01:59Z, local run)
+
+CASE       WITH  W/OUT Δ      RUNS COST
+adr-shape  1.00  0.00  +1.00  6    $0.82
+
+with the plugin: every run writes a fully parseable ADR (five criteria, judge 3/3)
+without:        zero runs do — the wild baseline the skill exists to change
+indicator:      adr-authoring skill fired in every with-arm run (tool_used, with-only)
+full report: evals/results/2026-10-19T01-59-05-947Z/ (local, untracked)
