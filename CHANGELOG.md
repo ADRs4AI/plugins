@@ -4,6 +4,7 @@ All notable changes to the `adrs4ai` marketplace and its plugins are recorded he
 
 ## [Unreleased] — assembling as adr@0.1.0 (first release rides the founder's word)
 
+- **License: Apache 2.0** (the founder's word, 2026-10-18 — template and plugin together; manifests + LICENSE swapped).
 - **Repo born** 2026-10-13 from `ADRs4AI/human-ai-collaboration-template-A` (template generation; instantiated same day — placeholders filled, birth fixtures removed per the three-class taxonomy, `kintsugi` lock = bill of materials).
 - **Marketplace manifest** (`adrs4ai`) + **flagship plugin `adr`** per HQ ADR-0041 (Accepted) and Mint №77/№78 (repo `ADRs4AI/plugins`; flagship named by its artifact; marketplace by the house).
 - **Skills (cargo, interim)**: `adr-authoring`, `adrs4ai-tooling`, `question-tours` — byte-identical copies of the canonical template's skills at the lock's pinned version; they swap to `kintsugi adopt --profile plugin-operator` delivery when kintsugi v0.13 ships profiles (declared in `kintsugi.yaml`). Adaptations never happen here — they travel upstream to canonical and return by release.

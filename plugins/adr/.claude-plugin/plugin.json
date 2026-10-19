@@ -9,6 +9,6 @@
   },
   "homepage": "https://github.com/ADRs4AI/plugins",
   "repository": "https://github.com/ADRs4AI/plugins",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "keywords": ["adr", "architectural-deliberation-records", "methodology", "question-tours", "human-ai-collaboration"]
 }

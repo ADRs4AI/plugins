@@ -31,4 +31,4 @@ The plugin is the **operator layer** — it follows the person. The **record lay
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+Apache 2.0 — see [LICENSE](LICENSE). (Relicensed from MIT at the rights-holder's word, 2026-10-18.)
