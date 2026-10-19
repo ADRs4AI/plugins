@@ -1,6 +1,7 @@
 # Eval suite — the quality signature
 
-Run with `claude plugin eval plugins/adr` (from the repo root) — the with/without ablation is the default, and it is the point: each case measures whether the plugin's teaching *changes model behavior*, which is the methodology's own falsifiable claim (ADR-0041 QST-PLUGIN-V1-SCOPE = B, "the eval suite from day one").
+Run with `claude plugin eval plugins/adr --allow-tools Write` (from the repo root; the Write grant is required — cases create files, and ungranted tools are removed from runs) — the with/without ablation is the default, and it is the point: each case measures whether the plugin's teaching *changes model behavior*, which is the methodology's own falsifiable claim (ADR-0041 QST-PLUGIN-V1-SCOPE = B, "the eval suite from day one").
 
+- Case form: `prompt.md` (frontmatter: run fields) + `graders/<name>.md` (frontmatter: `type`, optional `focus`/`arm`); an llm grader that must judge CREATED FILES needs `focus: trace` — the default judges only the final message, and the first signature run scored 0.00 on both arms for exactly that reason (grader blindness, not plugin failure; caught and rebuilt 2026-10-18).
 - `adr-shape/` — the founding case: a realistic record-this-decision prompt; the grader scores the five structural properties the `adr-authoring` skill exists to teach (numbered artifact, mandatory TL;DR, frontmatter enum, parseable QST block, catch-the-author Recommendation). The wild baseline it tests against: 76% of ~1,100 real specimens skip the TL;DR.
 - The suite grows one case per taught behavior (question-tours readiness, qst-lint classes). Release gate: the suite runs green before any `plugin.json` version bump (update posture A — pinned, deliberate).

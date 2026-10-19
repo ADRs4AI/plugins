@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "claudeVersion": "2.1.303",
+  "startedAt": "2026-10-19T01:49:14.016Z",
+  "durationSeconds": 452,
+  "costUsd": 1.0614168999999998,
+  "partial": true,
+  "partialReason": "interrupted",
+  "suite": {
+    "root": "/Users/jlumbroso/Programming/adrs4ai/initial-meta-repository/subprojects/plugins/plugins/adr",
+    "ablation": "with-without",
+    "threshold": 1,
+    "concurrency": 1,
+    "plugins": [
+      {
+        "name": "adr",
+        "version": "0.1.0",
+        "path": "/Users/jlumbroso/Programming/adrs4ai/initial-meta-repository/subprojects/plugins/plugins/adr"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "name": "adr-shape",
+      "dir": "evals/adr-shape",
+      "source": "mixed",
+      "promptMarkdown": "Our team just made a decision I need recorded before we lose the reasoning.\n\nWe chose PostgreSQL over SQLite for the ingestion service. The driver was concurrent writers: the collector fleet writes in parallel and SQLite's writer lock serialized them; we also weighed operational cost (we now need a managed instance) and migration effort (two weeks, acceptable). One thing is still open: whether we pin Postgres 16 or track the latest major — I want my tech lead to make that call, with your recommendation attached.\n\nPlease create the decision record in `docs/adr/` of this repository.",
+      "runsPerCase": 3,
+      "timeoutSeconds": 300,
+      "maxTurns": 10,
+      "graders": [
+        {
+          "name": "adr-shape",
+          "type": "llm",
+          "weight": 1,
+          "graderMarkdown": "Grade the ADR file the agent created under docs/adr/ (fail if none exists).\nScore each criterion pass/fail; the case passes when ALL FIVE pass:\n1. NUMBERED ARTIFACT: the file is named NNNN-<slug>.md (four-digit\n   zero-padded sequence) inside docs/adr/.\n2. MANDATORY TL;DR: a one-line \"**TL;DR**:\" near the top that states the\n   decision (PostgreSQL over SQLite) and the driving reason (concurrent\n   writers). This is the methodology's one non-negotiable field.\n3. FRONTMATTER: Date, Iteration, Status, and Deciders lines are present;\n   Status is one of Draft / Accepted / Partially Implemented /\n   Implemented / Superseded.\n4. PARSEABLE QUESTION BLOCK, not prose: the pin-vs-track-latest question\n   appears under a heading matching \"### QST:\" or \"### QST-<ID>:\"\n   (exactly three hashes), with its own \"- Status: unanswered\" line\n   directly under it, a \"- Why asking:\" that restates the context so the\n   block stands alone, and an Options block with one option per bullet\n   (letter + bold name + description evaluable in place).\n5. CATCH-THE-AUTHOR RECOMMENDATION: a \"**Recommendation**:\" block\n   attributed in parentheses, leading with a bold pick that names an\n   option letter from criterion 4's block, carrying a rationale, a\n   confidence with a \"because\", and an \"If wrong:\" clause stating what\n   would change the pick.\nDo NOT award partial credit for the decision being merely described in\nprose: the claim under test is that the record is PARSEABLE — a correct\ndecision in an unparseable shape is this eval's failure mode, not its pass.\n",
+          "config": {
+            "criteria": "Grade the ADR file the agent created under docs/adr/ (fail if none exists).\nScore each criterion pass/fail; the case passes when ALL FIVE pass:\n1. NUMBERED ARTIFACT: the file is named NNNN-<slug>.md (four-digit\n   zero-padded sequence) inside docs/adr/.\n2. MANDATORY TL;DR: a one-line \"**TL;DR**:\" near the top that states the\n   decision (PostgreSQL over SQLite) and the driving reason (concurrent\n   writers). This is the methodology's one non-negotiable field.\n3. FRONTMATTER: Date, Iteration, Status, and Deciders lines are present;\n   Status is one of Draft / Accepted / Partially Implemented /\n   Implemented / Superseded.\n4. PARSEABLE QUESTION BLOCK, not prose: the pin-vs-track-latest question\n   appears under a heading matching \"### QST:\" or \"### QST-<ID>:\"\n   (exactly three hashes), with its own \"- Status: unanswered\" line\n   directly under it, a \"- Why asking:\" that restates the context so the\n   block stands alone, and an Options block with one option per bullet\n   (letter + bold name + description evaluable in place).\n5. CATCH-THE-AUTHOR RECOMMENDATION: a \"**Recommendation**:\" block\n   attributed in parentheses, leading with a bold pick that names an\n   option letter from criterion 4's block, carrying a rationale, a\n   confidence with a \"because\", and an \"If wrong:\" clause stating what\n   would change the pick.\nDo NOT award partial credit for the decision being merely described in\nprose: the claim under test is that the record is PARSEABLE — a correct\ndecision in an unparseable shape is this eval's failure mode, not its pass.\n",
+            "focus": "last_message"
+          }
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 0,
+            "passed": false,
+            "turns": 11,
+            "costUsd": 0.2712105999999999,
+            "judgeCostUsd": 0.0005608,
+            "durationSeconds": 90,
+            "startedAt": "2026-10-19T01:49:14.212Z",
+            "error": null,
+            "tracePath": "/private/tmp/e-EaaPpw/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "adr-shape",
+                "passed": false,
+                "weight": 1,
+                "explanation": "judge votes: FAIL FAIL FAIL",
+                "withOnly": false,
+                "scored": true,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ],
+                "evidence": "Created ADR-0001 at `docs/adr/0001-postgresql-over-sqlite-for-ingestion-service.md`.\n\nThe record captures your PostgreSQL decision with the concurrent-writer driver and operational trade-offs. I've structured the open version-pinning question with two options and included my recommendation: **pin to Postgres 16** for production stability, with medium-high confidence. The rationale focuses on write-path sensitivity and controlled upgrade timing; the nullification conditions are provider EOL or a >30% throughput gain in a newer major version.\n\nYour tech lead can answer directly in the ANS block when ready."
+              }
+            ]
+          },
+          {
+            "score": 0,
+            "passed": false,
+            "turns": 10,
+            "costUsd": 0.18475289999999997,
+            "judgeCostUsd": 0.0006636000000000001,
+            "durationSeconds": 84,
+            "startedAt": "2026-10-19T01:50:44.536Z",
+            "error": null,
+            "tracePath": "/private/tmp/e-AHHNx7/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "adr-shape",
+                "passed": false,
+                "weight": 1,
+                "explanation": "judge votes: FAIL FAIL FAIL",
+                "withOnly": false,
+                "scored": true,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ],
+                "evidence": "Created **ADR-0001** in `docs/adr/0001-postgresql-over-sqlite-for-ingestion-service.md`.\n\nThe decision is documented as **Accepted** — PostgreSQL chosen for concurrent write support, with the two-week migration effort and operational cost trade-offs recorded.\n\nOne open question for your tech lead: **whether to pin to Postgres 16 or track latest major versions**. I've included my recommendation (pin to 16 for stability during post-migration) with the reasoning and conditions that would flip it. Your tech lead can fill in the `ANS:` block once decided."
+              }
+            ]
+          },
+          {
+            "score": 0,
+            "passed": false,
+            "turns": 13,
+            "costUsd": 0.24645409999999998,
+            "judgeCostUsd": 0.0007577,
+            "durationSeconds": 127,
+            "startedAt": "2026-10-19T01:52:08.412Z",
+            "error": null,
+            "tracePath": "/private/tmp/e-xVHBUH/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "adr-shape",
+                "passed": false,
+                "weight": 1,
+                "explanation": "judge votes: FAIL FAIL FAIL",
+                "withOnly": false,
+                "scored": true,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ],
+                "evidence": "Created **ADR 0001** at `docs/adr/0001-postgresql-over-sqlite-for-ingestion-service.md`.\n\nThe record captures:\n- **Decision**: PostgreSQL over SQLite for concurrent writer support\n- **Drivers**: Collector fleet parallelism (blocked by SQLite's writer lock), operational cost tradeoff, two-week migration effort\n- **Open question**: Version pinning strategy (QST-VERSION-STRATEGY) with three options and my recommendation\n\n**My recommendation** is **Option C — Pin with scheduled reviews**: Start pinned to Postgres 16 for stability during initial deployment, then quarterly reviews to evaluate upgrades deliberately. This balances stability (you just migrated from SQLite) with access to PostgreSQL's meaningful performance and security improvements, while avoiding both \"pin forever\" stagnation and \"auto-track\" blind upgrades.\n\nThe question block is ready for your tech lead to answer — the `[Fill this in]` placeholder marks it as unanswered for tracking tools."
+              }
+            ]
+          }
+        ],
+        "without": [
+          {
+            "score": 0,
+            "passed": false,
+            "turns": 8,
+            "costUsd": 0.15651900000000002,
+            "judgeCostUsd": 0.00024629999999999964,
+            "durationSeconds": 72,
+            "startedAt": "2026-10-19T01:54:15.122Z",
+            "error": null,
+            "tracePath": "/private/tmp/e-EQAcUx/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "adr-shape",
+                "passed": false,
+                "weight": 1,
+                "explanation": "judge votes: FAIL FAIL FAIL",
+                "withOnly": false,
+                "scored": true,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ],
+                "evidence": "Decision record created at `docs/adr/0001-use-postgresql-for-ingestion-service.md` with the PostgreSQL rationale, trade-offs, and version pinning recommendation ready for your tech lead."
+              }
+            ]
+          },
+          {
+            "score": 0,
+            "passed": false,
+            "turns": 6,
+            "costUsd": 0.12188919999999999,
+            "judgeCostUsd": 0.0004905999999999999,
+            "durationSeconds": 52,
+            "startedAt": "2026-10-19T01:55:26.950Z",
+            "error": null,
+            "tracePath": "/private/tmp/e-JqWof0/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "adr-shape",
+                "passed": false,
+                "weight": 1,
+                "explanation": "judge votes: FAIL FAIL FAIL",
+                "withOnly": false,
+                "scored": true,
+                "judgeVotes": [
+                  false,
+                  false,
+                  false
+                ],
+                "evidence": "Created the ADR at `docs/adr/001-postgresql-for-ingestion-service.md`.\n\nThe record captures your decision with the concurrent writer bottleneck as the primary driver, documents the operational cost and migration effort trade-offs, and includes my recommendation to pin Postgres 16 rather than track latest — stability and controlled upgrades matter more for a critical ingestion path than staying current with major releases.\n\nYour tech lead has the version decision clearly flagged in the \"Open Questions\" section with the reasoning attached."
+              }
+            ]
+          },
+          {
+            "score": 0,
+            "passed": false,
+            "turns": 3,
+            "costUsd": 0.08059110000000001,
+            "judgeCostUsd": 0,
+            "durationSeconds": 27,
+            "startedAt": "2026-10-19T01:56:18.953Z",
+            "error": "interrupted",
+            "tracePath": "/private/tmp/e-f2droM/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "adr-shape",
+                "passed": false,
+                "weight": 1,
+                "explanation": "grader threw: Request was aborted.",
+                "withOnly": false,
+                "scored": true
+              }
+            ]
+          }
+        ]
+      },
+      "aggregates": {
+        "score": 0,
+        "passRate": 0,
+        "scoreWithout": 0,
+        "passRateWithout": 0,
+        "delta": 0
+      }
+    }
+  ],
+  "aggregates": {
+    "casesTotal": 1,
+    "casesPassed": 0,
+    "overallScore": 0,
+    "overallPassRate": 0,
+    "meanDelta": 0
+  }
+}
