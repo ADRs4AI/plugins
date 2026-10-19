@@ -5,6 +5,8 @@ description: Use when creating, repairing, validating, walking, offering, or ret
 
 # QuestionTours
 
+<!-- skill version: "question-tours 3.12.0" — co-versioned INTERIM stamp at graduation; its own version stem is pending Mint's docket (renames are cheap, fossils are not: this stamp dates the copy, the stem names the lineage) -->
+
 Maintained by Docent 5 (QuestionTours owner). Seeded from Shipwright 5's HQ
 field guide; **standalone by Shipwright's ruling**, graduating into the template
 after the vocabulary freeze. Verbs ruled by Mint 5 (hub ledger №65 as amended by

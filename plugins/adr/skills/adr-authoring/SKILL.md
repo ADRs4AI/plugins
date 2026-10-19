@@ -3,7 +3,7 @@ name: adr-authoring
 description: Use BEFORE writing or editing any ADR, seed, or QST/ANS block in docs/adr/ — the template's minimal shape, the QST grammar and handles, the catch-the-author Recommendation form, and the four real-world malformations that break parsing. This skill IS the read-the-template step; skipping it re-creates the failure it exists to fix.
 ---
 
-<!-- skill version: "adr-authoring 3.11.6" — co-versioned with human-ai-collaboration-template-A; assembled from Rubricator 5's corpus-adherence syllabus -->
+<!-- skill version: "adr-authoring 3.12.0" — co-versioned with human-ai-collaboration-template-A; assembled from Rubricator 5's corpus-adherence syllabus -->
 
 # Writing parseable ADRs, seeds, and questions
 

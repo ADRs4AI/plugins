@@ -65,9 +65,13 @@ This template ships wired for a toolchain it cannot assume is installed. This sk
 
 **Detect**: a workflow under `.github/workflows/` running a qst-lint-class check on `docs/adr/**`. **Explain**: the records are machine-readable on purpose; the lint keeps PRs from silently breaking the grammar (malformed question headings, option ribbons, dangling letters — each a real, named failure class). **Offer**: the reference workflow ships with newer template releases (the free-disk-space graft is the worked example); adopt via kintsugi update when available. **Verify**: the workflow runs green on a PR touching `docs/adr/`.
 
+## 12. The `adr` plugin (the operator layer, installed once, account-wide)
+
+**Detect**: `/plugin` lists `adr@adrs4ai`, or the session's skills carry a plugin-sourced copy of this very file. **Explain**: the template is the record layer (travels with each repo, self-contained forever); the plugin is the operator layer — these skills plus the `/adr:new`, `/adr:unanswered`, `/adr:qst-lint` commands — following the *person* across every repo, template-adopted or not. **Offer**: two lines, once: `/plugin marketplace add ADRs4AI/plugins` then `/plugin install adr@adrs4ai` (versions pinned; updates are deliberate — enable auto-update for the marketplace or run `/plugin marketplace update adrs4ai` on your own rhythm). Once listed, the Claude plugin directory on claude.ai is the second door. **Verify**: `/adr:unanswered` answers in any repo. (In a template instance both layers are present by design — the in-repo copies keep working with zero installs; the plugin adds the commands and cross-repo reach.)
+
 ## The delivery loop (this skill's first job)
 
-This skill travels by any channel — inside the template, by kintsugi update, **or as a single emailed file dropped into `.claude/skills/adrs4ai-tooling/`** (proven: the ecosystem's first non-programming hivekeeper received his first skill exactly that way). If it arrived alone in a hive that lacks kintsugi: entries 8 then 10 are your first moves (the floor, then the maintainer), because they make every future arrival automatic. A toolchain that can explain itself once can maintain itself forever.
+This skill travels by any channel — inside the template, by kintsugi update, **as the `adr` plugin (entry 12 — the widest door)**, or as a single emailed file dropped into `.claude/skills/adrs4ai-tooling/` (proven: the ecosystem's first non-programming hivekeeper received his first skill exactly that way). If it arrived alone in a hive that lacks kintsugi: entries 8 then 10 are your first moves (the floor, then the maintainer), because they make every future arrival automatic. A toolchain that can explain itself once can maintain itself forever.
 
 ## Seats, models, and usage caps (the philosophy, offered whole)
 
