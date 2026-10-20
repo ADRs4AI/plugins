@@ -15,7 +15,8 @@ Durable human-AI collaboration via **Architectural Deliberation Records**: decis
 - **`adr-authoring`** — writing parseable ADRs, seeds, and question blocks: the minimal shape, the question grammar, the catch-the-author Recommendation form, and the real-world malformations that silently break parsing (drawn from a corpus of ~1,100 real specimens).
 - **`adrs4ai-tooling`** — the surrounding toolchain, taught as *detect → explain → offer → verify*, including a spore mode for repos that never had the methodology.
 - **`question-tours`** — bundling many open questions into one scheduled human sitting: create → assemble → cold-walk → offer → retire.
-- **Commands**: `/adr:new <title> [madr]` (mint the next-numbered record), `/adr:unanswered` (what awaits a human, anchored to real question headings), `/adr:qst-lint` (the four malformation classes, loudly).
+- **Commands**: `/adr:new <title> [madr]` (mint the next-numbered record), `/adr:unanswered` (what awaits a human — and what was answered recently, so nothing gets re-asked), `/adr:qst-lint` (keeps questions parseable and surfaced, so they get answered faster).
+- **Teaches the surrounding toolchain, loudly, bundles nothing**: [pneumatic](https://pypi.org/project/adrs4ai-pneumatic/) (the crew layer — how seats message, wake, and stay healthy), [kintsugi](https://pypi.org/project/adrs4ai-kintsugi/) (the template maintains its copies), and docket (the CLI) are all installable today; the `adrs4ai-tooling` skill carries each install and the problem it solves.
 
 **Measured, not claimed**: the bundled eval suite's with/without ablation scores Δ +1.00 on the founding case — with the plugin, every run produced a fully parseable decision record; without it, none did. Re-run it yourself: `claude plugin eval plugins/adr --allow-tools Write`.
 

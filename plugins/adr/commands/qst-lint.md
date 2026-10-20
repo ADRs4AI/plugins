@@ -1,5 +1,5 @@
 ---
-description: Find malformed or dialect QST blocks that parsers silently miss — the four real-world malformation classes, loudly
+description: Ensures your questions are PARSEABLE and actually SURFACE to the human — so they get answered faster. Finds the four real-world malformation classes that make questions invisible, loudly
 ---
 
 Lint this repository's `docs/adr/` for question blocks that LOOK like questions to a human but are invisible or wrong to every parser. The four classes, each from a real uncorrected corpus (counts from ~1,100 specimens):

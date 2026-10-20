@@ -1,7 +1,11 @@
 # kintsugi.yaml — the canonical template's SHIPPED manifest (template vNEXT).
 # Copied verbatim at instantiation; `kintsugi adopt` then writes the lock.
 #
-# THIS REPO'S DECLARED INTERIM (ADR-0041, Kintsugi's one-source rulings):
+# THIS REPO'S DECLARED INTERIM (ADR-0041, Kintsugi's one-source rulings).
+# PLAIN WORDS (the founder asked, pharoscan card kin): this block GATES NOTHING
+# — kintsugi and pneumatic are on PyPI today and are taught as such; this note
+# only (a) stops kintsugi update from re-stamping the plugin's cargo copies and
+# (b) names the cleaner delivery that arrives with kintsugi v0.13 profiles.
 # `plugins/adr/skills/*` are CARGO — byte-identical copies of the canonical
 # template's skills, re-published by the plugin. The lock is each release's
 # bill of materials. These rows swap to profile delivery
