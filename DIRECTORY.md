@@ -52,6 +52,10 @@ The pin fix cleared the blocking class. Two findings acted on toward the **Verif
 
 **New name finding, the one real one** — `NAME_EQUALS_GITHUB_OWNER`: `adr` is also the GitHub account `github.com/adr` (the Architectural Decision Records org, adr.github.io — the field's well-known elder). Defense, honest and ready: `adr` is the field's generic initialism; our expansion is distinct and documented in-product (*Architectural Deliberation Records*, with the ADR-as-elder homage stated in `adr-madr.md`'s own header); no affiliation claimed anywhere, and the Terms' no-partnership bar is already house law. If the reviewer still wants distance, `displayName` (not `name`) is the lever — founder's call, never unilateral.
 
+## Portal validation №3 record (2026-10-20, on v0.1.2 @ 968d7aa — **PASSED**, 4 warnings · 7 holds; the submit state)
+
+The lockfile landed as designed — **`LAUNCHER_LOCKED`** (the Verified-badge evidence, verbatim): *"runs npx @adrs4ai/mcp@0.1.0 from package-lock.json: every dependency is pinned to an exact registry version with a strong hash (97 lock entries), so Claude Code's locked launch installs exactly this set (digest bd504893a25a9b3fdb223476332a6ce5608df105b90bc119493667dfbd6204a3)."* The one new hold, `LOCKFILE_AUTO_INSTALL`, is the expected pin-tax per its own text ("No action needed… expected for any plugin that pins… If the lockfile pins an npx-launched server, keep it"). All other findings unchanged from №2; all defenses above stand. **Terminal state: the founder submits.** After submit: name-hold review expected (generic `adr` + the github.com/adr adjacency); only "Published" = installable; the tracked-tag field moves per release (next: regenerate the lock at each MCP pin bump BEFORE tagging, so LAUNCHER_LOCKED holds its digest).
+
 ## Standing cautions (from the Terms, for whoever operates this)
 
 Anthropic may remove a listing at any time and may change terms without notice — **the GitHub door stays the always-available install path** and every ADRs4AI surface teaches it first. Never present the plugin as official/partnered. Never change a published plugin's name. Submission cadence limit: 10/org/24h.
