@@ -1,0 +1,8 @@
+{
+  "name": "adr-mcp-lock",
+  "private": true,
+  "description": "Lockfile anchor for the plugin-declared MCP server: pins @adrs4ai/mcp@0.1.0 and its whole transitive tree with registry hashes, so the code that installs is the code that was scanned (directory LAUNCHER_LOCK_MISSING / Verified badge).",
+  "dependencies": {
+    "@adrs4ai/mcp": "0.1.0"
+  }
+}

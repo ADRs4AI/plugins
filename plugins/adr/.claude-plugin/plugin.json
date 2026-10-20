@@ -1,6 +1,6 @@
 {
   "name": "adr",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "ADRs4AI: durable human-AI collaboration via Architectural Deliberation Records. Teaches parseable ADRs/seeds/QSTs (adr-authoring), the toolchain (adrs4ai-tooling), and batched human-attention tours (question-tours); ships /adr:new, /adr:unanswered, /adr:qst-lint. Version is ALWAYS pinned \u2014 releases are deliberate (ADR-0041 update posture A).",
   "author": {
     "name": "J\u00e9r\u00e9mie Lumbroso and the ADRs4AI crews",

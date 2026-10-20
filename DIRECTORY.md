@@ -46,6 +46,12 @@ Verified at source (two live reads of support article 13145338 + the Policy 1314
 - `NAME_CONFUSABLE` ×2: "adr" held against "AI事業変革シミュレーター" and "Бахтин" — validator false-positives of the confusable-normalization kind (nothing in `adr` resembles either); anticipated hold on the generic name, leave for review.
 - `UNKNOWN_KEY`/`STDIO_WEB_UNSUPPORTED`/`ASSETS_PASSED_UNREAD`/github.com/adr note: informational, no action.
 
+## Portal validation №2 record (2026-10-20, on v0.1.1 @ 7429f63 — **PASSED**, 5 warnings · 6 holds)
+
+The pin fix cleared the blocking class. Two findings acted on toward the **Verified badge** (v0.1.2): `LAUNCHER_LOCK_MISSING`/`LAUNCHER_PACKAGE_REVIEW` — the pinned package's *transitive* ranges still resolve at install, so v0.1.2 ships `plugins/adr/package.json` (+`package-lock.json`, 98 packages, integrity hashes, `--ignore-scripts`, 0 vulnerabilities) anchoring `@adrs4ai/mcp@0.1.0`'s whole tree — "exact versions, registry sources and hashes are required for the Verified badge." Lock regenerates at each MCP pin bump (release ritual line).
+
+**New name finding, the one real one** — `NAME_EQUALS_GITHUB_OWNER`: `adr` is also the GitHub account `github.com/adr` (the Architectural Decision Records org, adr.github.io — the field's well-known elder). Defense, honest and ready: `adr` is the field's generic initialism; our expansion is distinct and documented in-product (*Architectural Deliberation Records*, with the ADR-as-elder homage stated in `adr-madr.md`'s own header); no affiliation claimed anywhere, and the Terms' no-partnership bar is already house law. If the reviewer still wants distance, `displayName` (not `name`) is the lever — founder's call, never unilateral.
+
 ## Standing cautions (from the Terms, for whoever operates this)
 
 Anthropic may remove a listing at any time and may change terms without notice — **the GitHub door stays the always-available install path** and every ADRs4AI surface teaches it first. Never present the plugin as official/partnered. Never change a published plugin's name. Submission cadence limit: 10/org/24h.
