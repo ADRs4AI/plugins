@@ -21,4 +21,4 @@ Durable human-AI collaboration via **Architectural Deliberation Records**: decis
 
 **Measured, not claimed**: the bundled eval suite's with/without ablation scores Δ +1.00 on the founding case — with the plugin, every run produced a fully parseable decision record; without it, none did. Re-run it yourself: `claude plugin eval plugins/adr --allow-tools Write`.
 
-**Support & docs**: questions and issues → [ADRs4AI/community](https://github.com/ADRs4AI/community) (the project's public front desk) or this repo's issues. The methodology's reference corpus: [schemas.adrs.systems](https://schemas.adrs.systems). License: Apache 2.0.
+**Support & docs**: questions and issues → [ADRs4AI/community](https://github.com/ADRs4AI/community) (the project's public front desk), this repo's issues, or support@adrs.systems. The methodology's reference corpus: [schemas.adrs.systems](https://schemas.adrs.systems). License: Apache 2.0.
