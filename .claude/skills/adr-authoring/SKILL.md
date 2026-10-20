@@ -3,7 +3,7 @@ name: adr-authoring
 description: Use BEFORE writing or editing any ADR, seed, or QST/ANS block in docs/adr/ — the template's minimal shape, the QST grammar and handles, the catch-the-author Recommendation form, and the four real-world malformations that break parsing. This skill IS the read-the-template step; skipping it re-creates the failure it exists to fix.
 ---
 
-<!-- skill version: "adr-authoring 3.11.6" — co-versioned with human-ai-collaboration-template-A; assembled from Rubricator 5's corpus-adherence syllabus -->
+<!-- skill version: "adr-authoring 3.12.0" — co-versioned with human-ai-collaboration-template-A; assembled from Rubricator 5's corpus-adherence syllabus -->
 
 # Writing parseable ADRs, seeds, and questions
 
@@ -96,6 +96,11 @@ Every pair below is a real, uncorrected specimen from this ecosystem's own corpu
 > an ANS reading *"Option A to try… if jarring, B… will help decide whether to scrape this"* — a trial, not a verdict. The question read `answered` for **three days** while its real decision was pending — invisible to tours, the shelf, and `staleAnswered` alike, because **lifecycle state in prose has no form, and what has no form cannot be detected, only lost.**
 **Always**: the ANS states the decision actually made; a pending verdict gets its **own minted follow-up QST** (with a relates/blocks edge back), so the open thing is a real question the machinery can see. For small cases, the status valve is the lightweight middle: `- Status: answered — trial; verdict QST to follow by <condition>`. The ANS slot's contract is absolute: *this text IS the answer.*
 *(Field specimen with receipts, companion-étude ADR-0064, 2026-10; class predicted 2026-07-30 in vscode ADR-0032's annotated-status work; detection ruled closed — prevention-only — same arc. The ✓ reframe is Docent 5's; the answer-time follow-up affordance now exists tool-side, so the fix is often one click.)*
+
+**Never** — "QST" as prose vocabulary (the **generic-QST**):
+> "every decision above was ruled in conversation or a prior QST (cited)"
+**Always**: the token either **mints** (`### QST:` heading) or **points** (a specific `QST-<ID>` citation); in running text, write *question* — "ruled in conversation or a prior question (QST-LEXICON-DISPATCH)". The founder's rule, verbatim: *"'QST' should not be used in any other context than to instantiate an actual specific QST."* Why it matters though it breaks no parser: the token's value IS its grep-signal — every occurrence should be structure or citation (the ⟦SIGIL⟧ principle, №85: *every-occurrence-authored*), and generic use trains the next imitator to blur a load-bearing marker into chatter.
+*(Founder-caught at muster, ADR-0013:33, 2026-10-20 — the same file cites three handles correctly at lines 25/29, so the specimen shows exactly where the line sits; relayed by Gleaner 5.)*
 
 ## 4. The handle grammar, in one line (plus the fragility worth knowing)
 
