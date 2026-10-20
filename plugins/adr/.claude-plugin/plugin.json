@@ -19,5 +19,11 @@
   ],
   "supportUrl": "https://github.com/ADRs4AI/community/discussions",
   "documentationUrl": "https://schemas.adrs.systems",
-  "icon": "icon.png"
+  "icon": "icon.png",
+  "mcpServers": {
+    "adrs4ai": {
+      "command": "npx",
+      "args": ["-y", "@adrs4ai/mcp", "."]
+    }
+  }
 }

@@ -4,7 +4,7 @@ description: List every open question (QST) in this repo that is waiting on a hu
 
 Report what is blocked on the human right now, across this repository's deliberation record.
 
-1. If `mcp__adrs-for-ai__*` tools are in this session, use `list_open_questions` — the typed verb parses the grammar instead of reconstructing it. Otherwise:
+1. If `mcp__adrs4ai__*` tools are in this session, use `list_open_questions` — the typed verb parses the grammar instead of reconstructing it. Otherwise:
 2. Find real questions by their headings (both canonical forms — a bare `### QST:` grep silently misses every handled question):
    ```
    grep -rnE '^### QST(-[A-Za-z0-9-]{1,24})?:' docs/adr/ --exclude-dir=templates

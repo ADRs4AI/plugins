@@ -215,7 +215,7 @@ DOC:  # Documentation
 NOT:  # Notes, remarks, comments, observations
 ```
 
-**Find things — the typed verbs come first, grep is the fallback.** If this session has the `adrs-for-ai` MCP tools (look for `mcp__adrs-for-ai__*`), prefer them: they parse the record's grammar instead of reconstructing it, and writes through them cannot fumble a status flip. The ladder, macro → micro: `list_open_questions` (what needs answers, repo-wide) → `lookup` (one record) → `get_outline` → `get_sections` (section-level detail — **this rung exists; take it before reaching for grep**) → `answer_question` / `apply_batch` (writes). No MCP in the session? The `adrs4ai-tooling` skill teaches the install; meanwhile the honest fallback:
+**Find things — the typed verbs come first, grep is the fallback.** If this session has the `adrs4ai` MCP tools (look for `mcp__adrs4ai__*`), prefer them: they parse the record's grammar instead of reconstructing it, and writes through them cannot fumble a status flip. The ladder, macro → micro: `list_open_questions` (what needs answers, repo-wide) → `lookup` (one record) → `get_outline` → `get_sections` (section-level detail — **this rung exists; take it before reaching for grep**) → `answer_question` / `apply_batch` (writes). No MCP in the session? This repo's `.mcp.json` carries the stanza (`@adrs4ai/mcp` via npx) — a session restart loads it; the `adrs4ai-tooling` skill teaches the rest; meanwhile the honest fallback:
 
 ```bash
 grep -E '^### QST(-[A-Za-z0-9-]{1,24})?:' -r docs/adr/   # All questions — both canonical forms; a bare '^### QST:' grep silently misses every handled question
