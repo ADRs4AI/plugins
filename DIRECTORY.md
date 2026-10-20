@@ -64,6 +64,11 @@ The lockfile landed as designed — **`LAUNCHER_LOCKED`** (the Verified-badge ev
 - **Acceptance receipts saved** (Covenant's gate-5 step, done): `docs/reference/2026-10-20-anthropic-software-directory-policy.md` + `-terms.md` (lumbroso-hq). The founder read both and endorsed them on the record — his gloss of the indemnity: accountability as a feature, "presumed innocent until shown guilty," a platform refusing to be unaccountable. The informed-acceptance click the Gate-1 record ¶3 asked for: achieved, enthusiastically.
 - **Pre-submit hold roll-up seen and expected**: pinned-npx · credential ×2 (teaching text) · lockfile-install · unfollowed scripts · name ×2 — all defended in the validation records above; submitted through them by design.
 
+## Next-release queue (listing fields — the founder's for-next-time notes, 2026-10-20, post-submit)
+
+- **keywords += `deliberative-programming`** (his ask; the house's own term — README already says "the toolkit for deliberative programming," so the keyword just catches up with the copy). Rides the next plugin.json change (v0.1.3-class; a tag move re-scans the listing).
+- **documentationUrl stays `schemas.adrs.systems` — his ruling after raising it himself**: it reads machine-doc-flavored, but the page disambiguates nicely ("For humans: the story lives at adrs.systems" is its own line). Revisit only if the portal ever renders the docs link somewhere that framing fails; the human-story alternative is `adrs.systems`.
+
 ## Step-2 (Listing details) decisions — recorded at first submit, 2026-10-20
 
 - **Surfaces**: all three ticked (Claude Code, Cowork, Claude apps) — the teaching skills serve web chat too; the portal itself notes the stdio MCP runs only in Code/Cowork (expected physics, the `STDIO_WEB_UNSUPPORTED` informational), and commands load as skills on web.
