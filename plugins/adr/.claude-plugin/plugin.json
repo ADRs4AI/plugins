@@ -18,5 +18,6 @@
     "human-ai-collaboration"
   ],
   "supportUrl": "https://github.com/ADRs4AI/community/discussions",
-  "documentationUrl": "https://schemas.adrs.systems"
+  "documentationUrl": "https://schemas.adrs.systems",
+  "icon": "icon.png"
 }

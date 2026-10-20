@@ -4,6 +4,7 @@ All notable changes to the `adrs4ai` marketplace and its plugins are recorded he
 
 ## [Unreleased] — assembling as adr@0.1.0 (first release rides the founder's word)
 
+- **Icon**: the scales-with-cog (the founder's pick, pharoscan dir card; the extension's own shipped icon — one mark across the toolkit) at `plugins/adr/icon.png`, wired for the directory listing.
 - **Support contact struck** (Mint №103, from the founder's pharoscan plg note): `support@adrs.systems`, gated on wiring-before-printing (a published address is a promise); `author.email` stays the founder channel; `supportUrl` (community discussions) already satisfies directory Policy 3B meanwhile.
 - **License: Apache 2.0** (the founder's word, 2026-10-18 — template and plugin together; manifests + LICENSE swapped).
 - **Repo born** 2026-10-13 from `ADRs4AI/human-ai-collaboration-template-A` (template generation; instantiated same day — placeholders filled, birth fixtures removed per the three-class taxonomy, `kintsugi` lock = bill of materials).
