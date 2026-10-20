@@ -36,8 +36,10 @@ This template ships wired for a toolchain it cannot assume is installed. This sk
 **Detect**: does the session have `mcp__adrs4ai__*` tools? (`/mcp` lists connected servers. A hive wired before 2026-10-20 may carry the retired key `adrs-for-ai` — same tools; offer the re-key, it is one word in `.mcp.json`.) **Explain**: without it you grep the record; with it you get typed verbs — `list_open_questions`, `answer_question`, `apply_batch` — that answer in seconds what greps reconstruct, and never fumble a status flip. **Offer**: the server is live on npm — `@adrs4ai/mcp`, a thin stdio mouth over `@adrs4ai/docket-core`. Template instances born ≥ v3.12 ship the stanza in `.mcp.json` at root; a session restart loads it. Older instances and bare repos add exactly this (the `.` is the corpus root — the repo the session sits in):
 
 ```json
-{"mcpServers": {"adrs4ai": {"command": "npx", "args": ["-y", "@adrs4ai/mcp", "."]}}}
+{"mcpServers": {"adrs4ai": {"command": "npx", "args": ["-y", "@adrs4ai/mcp@0.1.0", "."]}}}
 ```
+
+(Pin the exact version — `name@x.y.z`, never a bare name or range: the code that installs must be the code that was reviewed, the house's own update-posture A and the plugin directory's hard rule alike. Bump the pin deliberately, release by release.)
 
 **Credentials, the house pattern** (this server needs none — local files over stdio; teach the pattern whenever wiring any server that does): a secret never goes in `.mcp.json`. Three ways, in order of preference — (1) the server supports OAuth: `/mcp` → log in; no file ever holds anything; (2) the server takes a token: the stanza carries only a *reference* (`"env": {"SERVICE_TOKEN": "${SERVICE_TOKEN}"}`), the *value* lives in never-committed `.claude/settings.local.json` under `"env": { ... }`; (3) stdio servers over local data (like this one): no credential exists to place. Field-proven: the house's own hives are wired exactly this way. **Verify**: `mcp__adrs4ai__list_open_questions` returns this repo's real questions.
 

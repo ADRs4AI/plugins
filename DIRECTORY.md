@@ -35,6 +35,17 @@ Verified at source (two live reads of support article 13145338 + the Policy 1314
 4. **The no-partnership bar is a terms obligation, not just prudence**: no statement suggesting partnership, sponsorship, or endorsement without prior written approval. "Available in the Anthropic directory" (factual) is fine; "official/partnered/endorsed" never — binding on launch copy, README, and docsite.
 5. **Revocable and drifting by design**: removal "at any time for any reason"; terms modifiable "without prior notice." Consequences already in the cautions below, plus the receipt step added above: snapshot the terms at every submit and tracked-ref update.
 
+## Portal validation №1 record (2026-10-20, on v0.1.0 @ 5524e7c — the founder's paste)
+
+**1 blocking (FIXED → v0.1.1)**: `UNPINNED_NPX` — `npx @adrs4ai/mcp` without an exact pin. Legitimate, and house posture A agrees: now `@adrs4ai/mcp@0.1.0` in plugin.json (+ template stanza + skill example). Each MCP release = bump the pin here deliberately; the tracked tag moves with it.
+
+**Holds — reviewer-confirm territory, defenses (all teaching-text, no runtime)**:
+- `MCP_FORWARDS_CREDENTIAL_ENV` ×2 (`SERVICE_TOKEN` + adrs.systems in the tooling skill): the `${SERVICE_TOKEN}` string is a TEACHING EXAMPLE inside entry 4's credentials pattern (it teaches where secrets go — reference in `.mcp.json`, value in never-committed settings); no credential exists, nothing is read, the plugin's own server declares `"env"`-free stdio over local files. The finding's own text sanctions leaving it for the reviewer.
+- `RUNTIME_FETCH_EXEC` (curl|bash in skill body): entry 8's Homebrew install line, quoted as documentation of an offer the HUMAN approves — the skill's whole genre is detect → explain → OFFER → verify; nothing executes at plugin load. Per the finding: documentation needs no change.
+- `COMMAND_SCRIPT_NOT_FOLLOWED`: the `/adr:*` commands teach `just` recipes that live in the USER'S repo (the record layer), definitionally outside the plugin tree — the reviewer reads them in the canonical template, public at ADRs4AI/human-ai-collaboration-template-A.
+- `NAME_CONFUSABLE` ×2: "adr" held against "AI事業変革シミュレーター" and "Бахтин" — validator false-positives of the confusable-normalization kind (nothing in `adr` resembles either); anticipated hold on the generic name, leave for review.
+- `UNKNOWN_KEY`/`STDIO_WEB_UNSUPPORTED`/`ASSETS_PASSED_UNREAD`/github.com/adr note: informational, no action.
+
 ## Standing cautions (from the Terms, for whoever operates this)
 
 Anthropic may remove a listing at any time and may change terms without notice — **the GitHub door stays the always-available install path** and every ADRs4AI surface teaches it first. Never present the plugin as official/partnered. Never change a published plugin's name. Submission cadence limit: 10/org/24h.
