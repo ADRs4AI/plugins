@@ -56,6 +56,13 @@ The pin fix cleared the blocking class. Two findings acted on toward the **Verif
 
 The lockfile landed as designed — **`LAUNCHER_LOCKED`** (the Verified-badge evidence, verbatim): *"runs npx @adrs4ai/mcp@0.1.0 from package-lock.json: every dependency is pinned to an exact registry version with a strong hash (97 lock entries), so Claude Code's locked launch installs exactly this set (digest bd504893a25a9b3fdb223476332a6ce5608df105b90bc119493667dfbd6204a3)."* The one new hold, `LOCKFILE_AUTO_INSTALL`, is the expected pin-tax per its own text ("No action needed… expected for any plugin that pins… If the lockfile pins an npx-launched server, keep it"). All other findings unchanged from №2; all defenses above stand. **Terminal state: the founder submits.** After submit: name-hold review expected (generic `adr` + the github.com/adr adjacency); only "Published" = installable; the tracked-tag field moves per release (next: regenerate the lock at each MCP pin bump BEFORE tagging, so LAUNCHER_LOCKED holds its digest).
 
+## Step-2 (Listing details) decisions — recorded at first submit, 2026-10-20
+
+- **Surfaces**: all three ticked (Claude Code, Cowork, Claude apps) — the teaching skills serve web chat too; the portal itself notes the stdio MCP runs only in Code/Cowork (expected physics, the `STDIO_WEB_UNSUPPORTED` informational), and commands load as skills on web.
+- **privacyPolicyUrl absent = deliberate and correct** (no personal data, no external service; Covenant gate-1 limb iv) — the listing's "Not set" is the intended state, matching the Data-handling answers.
+- **termsOfServiceUrl absent = deliberate**: software under Apache-2.0, not a service under terms; adding one later is Covenant's lane, never a mid-submit improvisation.
+- **Classification**: auto-fill accepted at first submit; a `classification` block in plugin.json is the lever if auto reads wrong (future release, not a resubmit).
+
 ## Standing cautions (from the Terms, for whoever operates this)
 
 Anthropic may remove a listing at any time and may change terms without notice — **the GitHub door stays the always-available install path** and every ADRs4AI surface teaches it first. Never present the plugin as official/partnered. Never change a published plugin's name. Submission cadence limit: 10/org/24h.
