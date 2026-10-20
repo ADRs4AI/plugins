@@ -58,7 +58,7 @@ The lockfile landed as designed — **`LAUNCHER_LOCKED`** (the Verified-badge ev
 
 ## Submit-day record (2026-10-20, the founder's hands)
 
-- **Compliance contact**: `compliance@adrs.systems` — the founder's own pick at the portal, deliberately separated from the public `support@` ("to separate from the public address"). Same wire-before-print law as №103: confirmed routing is the founder's to assert, and he was asked at the moment of typing.
+- **Compliance contact**: `compliance@adrs.systems` — the founder's own pick at the portal, deliberately separated from the public `support@` ("to separate from the public address"). **Wiring confirmed, domain-wide and standing** (the founder, 2026-10-20): *all* `*@adrs.systems` forwards to `hello@lumbroso.computer` (catch-all) — №103's wire-before-print rider is satisfied for every present and future alias on the domain; no seat re-asks this, ever. (If the catch-all is ever retired, printed aliases need explicit forwards — that reversal is the only event that reopens this row.)
 - **Acceptance receipts saved** (Covenant's gate-5 step, done): `docs/reference/2026-10-20-anthropic-software-directory-policy.md` + `-terms.md` (lumbroso-hq). The founder read both and endorsed them on the record — his gloss of the indemnity: accountability as a feature, "presumed innocent until shown guilty," a platform refusing to be unaccountable. The informed-acceptance click the Gate-1 record ¶3 asked for: achieved, enthusiastically.
 - **Pre-submit hold roll-up seen and expected**: pinned-npx · credential ×2 (teaching text) · lockfile-install · unfollowed scripts · name ×2 — all defended in the validation records above; submitted through them by design.
 
