@@ -1,9 +1,9 @@
 {
   "name": "adr",
-  "version": "0.1.2",
-  "description": "ADRs4AI: durable human-AI collaboration via Architectural Deliberation Records. Teaches parseable ADRs/seeds/QSTs (adr-authoring), the toolchain (adrs4ai-tooling), and batched human-attention tours (question-tours); ships /adr:new, /adr:unanswered, /adr:qst-lint. Version is ALWAYS pinned \u2014 releases are deliberate (ADR-0041 update posture A).",
+  "version": "0.1.3",
+  "description": "ADRs4AI: durable human-AI collaboration via Architectural Deliberation Records. Teaches parseable ADRs/seeds/QSTs (adr-authoring), the toolchain (adrs4ai-tooling), and batched human-attention tours (question-tours); ships /adr:new, /adr:unanswered, /adr:qst-lint. Version is ALWAYS pinned — releases are deliberate (ADR-0041 update posture A).",
   "author": {
-    "name": "J\u00e9r\u00e9mie Lumbroso and the ADRs4AI crews",
+    "name": "Jérémie Lumbroso and the ADRs4AI crews",
     "email": "hello@lumbroso.computer",
     "url": "https://github.com/ADRs4AI"
   },
@@ -13,6 +13,7 @@
   "keywords": [
     "adr",
     "architectural-deliberation-records",
+    "deliberative-programming",
     "methodology",
     "question-tours",
     "human-ai-collaboration"
@@ -23,7 +24,11 @@
   "mcpServers": {
     "adrs4ai": {
       "command": "npx",
-      "args": ["-y", "@adrs4ai/mcp@0.1.0", "."]
+      "args": [
+        "-y",
+        "@adrs4ai/mcp@0.1.1",
+        "."
+      ]
     }
   }
 }

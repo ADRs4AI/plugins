@@ -2,7 +2,7 @@
   "mcpServers": {
     "adrs4ai": {
       "command": "npx",
-      "args": ["-y", "@adrs4ai/mcp@0.1.0", "."]
+      "args": ["-y", "@adrs4ai/mcp@0.1.1", "."]
     }
   }
 }
